@@ -38,3 +38,8 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: build
+      - name: Publish artifact
+        uses: actions/upload-artifact@v2
+        with: 
+          name: assets-for-download
+          path: build
